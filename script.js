@@ -1,5 +1,15 @@
 function volume_sphere() {
-    //Write your code here
+     event.preventDefault();
+	let r = parseFloat(document.getElementById("radius").value) ;
+
+	 if(r < 0)
+	 {
+		 document.getElementById("volume").value = "NaN" ;
+		 return ;
+}
+	let volume = (4/3) * Math.PI * (r**3) ;
+
+	document.getElementById("volume").value =  volume.toFixed(4) ;
   
 } 
 
